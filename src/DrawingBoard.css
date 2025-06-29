@@ -1,0 +1,99 @@
+.drawing-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background: #f9f9f9;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.drawing-canvas {
+  width: 100vw;
+  height: 60vh;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  touch-action: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-top: 16px;
+  transition: border 0.2s;
+}
+
+.clear-btn {
+  margin-top: 24px;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #ff5252;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clear-btn:active {
+  background: #d32f2f;
+}
+
+@media (min-width: 600px) {
+  .drawing-board {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .drawing-canvas {
+    width: 600px;
+    height: 400px;
+    max-width: 600px;
+    max-height: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    cursor: crosshair;
+  }
+}
+
+.drawing-canvas:focus, .drawing-canvas:active {
+  border: 2px solid #1976d2;
+}
+
+/* Chat/guessing UI tweaks */
+.guess-chat-box {
+  margin-top: 24px;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 12px;
+  min-height: 80px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.guess-input-form {
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 600px;
+}
+.guess-input-form input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+}
+.guess-input-form button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+} 
